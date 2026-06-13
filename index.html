@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAILG Македонија — Електрични возила | Официјален дистрибутер</title>
+<meta name="description" content="Официјален и ексклузивен дистрибутер на TAILG во Македонија. Shark, F55, S91 Pro и повеќе. Најдолг дострел, бесплатно пробно возење.">
+<meta property="og:title" content="TAILG Македонија — Иднината е електрична">
+<meta property="og:image" content="img/shark-main.png">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/shark-main.png">
+<link rel="preload" as="image" href="img/shark-scene.jpg">
+<style>
+:root{
+  --red:#E31937; --red-d:#B3122B; --ink:#0e0e10; --surface:#15151a; --surface-2:#1d1d23;
+  --line-d:#2a2a31; --mid-d:#9a9aa2; --gray:#f3f3f4; --soft:#FEF2F3; --mid:#6b6b6f; --line:#e7e7ea;
+  --r:16px; --maxw:1240px; --shadow:0 10px 40px rgba(10,10,12,.45); --shadow-l:0 24px 70px rgba(10,10,12,.18);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,Arial,sans-serif;color:#16161a;background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}a{text-decoration:none;color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:40px;font-weight:700;font-size:15px;padding:13px 26px;cursor:pointer;border:none;transition:.25s;white-space:nowrap}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-d);transform:translateY(-2px);box-shadow:0 12px 28px rgba(227,25,55,.4)}
+.btn-light{background:#fff;color:#16161a}.btn-light:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.25)}
+.btn-ghost{background:transparent;border:1.5px solid rgba(255,255,255,.4);color:#fff}.btn-ghost:hover{background:#fff;color:#111;transform:translateY(-2px)}
+.btn-ghost-d{background:transparent;border:1.5px solid #16161a;color:#16161a}.btn-ghost-d:hover{background:#16161a;color:#fff;transform:translateY(-2px)}
+.btn-wa{background:#25D366;color:#fff}.btn-wa:hover{background:#1eb955;transform:translateY(-2px)}
+.btn-sm{padding:9px 16px;font-size:13px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--red)}
+.reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.16,.84,.44,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* NAV — dark glass */
+header{position:sticky;top:0;z-index:90;background:rgba(14,14,16,.82);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line-d)}
+.nav{display:flex;align-items:center;gap:28px;height:72px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:28px;width:auto}
+.logo span{font-size:11px;font-weight:700;color:var(--mid-d);letter-spacing:3px;border-left:1px solid #333;padding-left:10px}
+.nav-links{display:flex;gap:24px;margin-left:auto;font-weight:600;font-size:15px}
+.nav-links a{position:relative;padding:4px 0;color:#d9d9de}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--red);transition:.25s}
+.nav-links a:hover{color:#fff} .nav-links a:hover::after{width:100%}
+.nav-cta{display:flex;gap:10px;align-items:center}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto;padding:8px;z-index:91}
+.burger span{width:24px;height:2px;background:#fff;transition:.3s;transform-origin:center}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none}
+
+/* HERO — dark */
+.hero{position:relative;background:radial-gradient(900px 520px at 80% 8%,rgba(0,0,0,.28),transparent 62%),linear-gradient(135deg,#E31937 0%,#c5152f 38%,#8c0f20 72%,#2a0509 100%);color:#fff;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:url('img/shark-scene.jpg') center/cover no-repeat;opacity:.12;mix-blend-mode:overlay}
+.life-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.life-card{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:16/10;display:block;border:1px solid var(--line)}
+.life-card img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.life-card:hover img{transform:scale(1.06)}
+.life-ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,8,10,.82),transparent 56%);display:flex;flex-direction:column;justify-content:flex-end;padding:18px;color:#fff}
+.life-ov b{font-size:20px;font-weight:800;letter-spacing:-.3px}
+.life-ov span{font-size:13px;color:#e2e2e6}
+@media(max-width:1000px){.life-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.life-grid{grid-template-columns:1fr}}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr 1fr;gap:30px;align-items:center;min-height:600px;padding:48px 0 56px}
+.hero h1{font-size:clamp(40px,5.4vw,68px);line-height:1.0;font-weight:800;letter-spacing:-1.5px}
+.rotator{color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:6px;display:inline-block;min-width:5ch;transition:opacity .25s}
+.hero .eyebrow{color:#ffd9df}
+.hero p.lead{font-size:18px;color:#ffe2e7;margin:22px 0 30px;max-width:480px;line-height:1.6}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero-media{position:relative;display:flex;align-items:center;justify-content:center}
+.hero-media .glow{position:absolute;width:120%;height:80%;background:radial-gradient(circle,rgba(227,25,55,.3),transparent 62%);filter:blur(14px);z-index:0}
+.hero-media img{position:relative;z-index:1;filter:drop-shadow(0 40px 60px rgba(0,0,0,.6));animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.hero-badge{position:absolute;z-index:2;background:rgba(30,30,35,.92);border:1px solid var(--line-d);border-radius:14px;padding:12px 16px;font-weight:700;font-size:14px;display:flex;align-items:center;gap:9px;color:#fff}
+.hero-badge small{display:block;font-size:11px;color:var(--mid-d);font-weight:600}
+.hero-badge.b1{top:6%;left:-6px} .hero-badge.b2{bottom:10%;right:-4px}
+.hero-badge .dot{width:34px;height:34px;border-radius:50%;background:rgba(227,25,55,.18);display:flex;align-items:center;justify-content:center;font-size:17px}
+
+/* STATS */
+.stats{background:#0b0b0d}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;padding:30px 0}
+.stats-grid>div{border-right:1px solid #232328;padding:6px 10px}
+.stats-grid>div:last-child{border:none}
+.stats .n{font-size:clamp(26px,3.4vw,40px);font-weight:800;color:#fff}
+.stats .n .u{color:var(--red)}
+.stats .l{font-size:13px;color:#86868d;margin-top:4px;font-weight:600;letter-spacing:.3px}
+
+.sec{padding:80px 0}
+.sec.dark{background:var(--ink);color:#fff}
+.sec.gray{background:var(--gray)}
+.sec.red{background:radial-gradient(700px 400px at 85% 0%,rgba(255,255,255,.12),transparent 60%),linear-gradient(135deg,#E31937,#B3122B);color:#fff}
+.sec.red .sec-head p{color:rgba(255,255,255,.88)}
+.sec.red .eyebrow{color:#ffd9df}
+.sec.soft{background:var(--soft)}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 46px}
+.sec-head h2{font-size:clamp(28px,3.6vw,42px);font-weight:800;letter-spacing:-1px;margin:10px 0 8px}
+.sec-head p{color:var(--mid);font-size:17px;line-height:1.6}
+.sec.dark .sec-head p{color:#b3b3ba}
+
+/* CATALOG */
+.filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.filters button{padding:10px 22px;border-radius:30px;border:1.5px solid var(--line);background:#fff;font-weight:700;font-size:14px;color:var(--mid);cursor:pointer;transition:.2s}
+.filters button:hover{border-color:var(--red);color:var(--red)}
+.filters button.active{background:var(--red);border-color:var(--red);color:#fff;box-shadow:0 8px 20px rgba(227,25,55,.28)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-l);border-color:#fff}
+.card .cbar{height:4px;background:var(--red)}
+.card .badge{position:absolute;top:16px;left:12px;z-index:3;background:var(--red);color:#fff;font-size:10px;font-weight:800;letter-spacing:.6px;padding:5px 11px;border-radius:30px}
+.card .imgwrap{aspect-ratio:1/.82;background:linear-gradient(160deg,#fafafb,#ececed);display:flex;align-items:center;justify-content:center;padding:20px}
+.card .imgwrap img{height:100%;width:100%;object-fit:contain;transition:.4s}
+.card:hover .imgwrap img{transform:scale(1.06)}
+.card .body{padding:16px 18px 20px;display:flex;flex-direction:column;flex:1}
+.card .cat{font-size:11px;font-weight:700;color:var(--red);letter-spacing:1px;text-transform:uppercase}
+.card .name{font-size:21px;font-weight:800;margin:3px 0 2px}
+.card .tag{font-size:13px;color:var(--mid);line-height:1.45;min-height:36px}
+.card .chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 14px}
+.card .chip{background:var(--gray);border-radius:8px;padding:5px 9px;font-size:11px;font-weight:600;color:#2a2a2a}
+.card .price{font-weight:800;font-size:15px;margin-bottom:12px}
+.card .price small{display:block;font-size:10px;color:var(--mid);font-weight:600}
+.card .actions{margin-top:auto;display:flex;gap:8px;position:relative;z-index:3}
+.card .actions .btn{flex:1;justify-content:center}
+.card a.cover{position:absolute;inset:0;z-index:1}
+
+/* SHARK VIDEO FEATURE — dark */
+.spotlight{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+.video-fac{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:16/9;cursor:pointer;border:1px solid var(--line-d);background:#000}
+.video-fac img{width:100%;height:100%;object-fit:cover;transition:.4s;opacity:.85}
+.video-fac:hover img{transform:scale(1.05);opacity:1}
+.video-fac .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.video-fac .play span{width:78px;height:78px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(227,25,55,.5);transition:.25s}
+.video-fac:hover .play span{transform:scale(1.08)}
+.video-fac .play span::after{content:"";border-left:22px solid #fff;border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
+.spotlight .txt h2{font-size:clamp(28px,3.6vw,42px);font-weight:800;letter-spacing:-1px;margin:12px 0 10px}
+.spotlight .txt p{color:#b3b3ba;font-size:16px;line-height:1.65;margin-bottom:22px}
+.spotlight .specrow{display:flex;gap:28px;margin-bottom:26px;flex-wrap:wrap}
+.spotlight .specrow div b{font-size:26px;font-weight:800;color:#fff}
+.spotlight .specrow div span{display:block;font-size:12px;color:#86868d;font-weight:600;margin-top:2px}
+.spotlight .fcta{display:flex;gap:12px;flex-wrap:wrap}
+
+/* TECH — dark */
+.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tech-card{background:var(--surface);border-radius:var(--r);padding:30px 26px;border:1px solid var(--line-d);transition:.3s}
+.tech-card:hover{transform:translateY(-5px);border-color:#3a3a42}
+.tech-card .ic{width:54px;height:54px;border-radius:14px;background:rgba(227,25,55,.14);display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:16px}
+.tech-card h3{font-size:19px;font-weight:800;margin-bottom:8px;color:#fff}
+.tech-card p{color:#a8a8af;font-size:14.5px;line-height:1.65}
+
+/* FLAGSHIP S91 */
+.flag{background:linear-gradient(120deg,#161619,#0e0e10);border:1px solid var(--line-d);color:#fff;border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.flag .txt{padding:56px 48px}
+.flag h2{font-size:clamp(28px,3.4vw,40px);font-weight:800;letter-spacing:-1px;margin:12px 0 14px}
+.flag p{color:#b3b3ba;font-size:16px;line-height:1.65;margin-bottom:26px}
+.flag .media{position:relative;height:100%;min-height:400px;overflow:hidden;padding:0}
+.flag .media img{width:100%;height:100%;object-fit:cover;display:block}
+.flag .specrow{display:flex;gap:26px;margin-bottom:26px;flex-wrap:wrap}
+.flag .specrow div b{font-size:26px;color:#fff;font-weight:800}
+.flag .specrow div span{display:block;font-size:12px;color:#86868d;font-weight:600;margin-top:2px}
+.flag .fcta{display:flex;gap:12px;flex-wrap:wrap}
+
+/* TEST DRIVE BAND */
+.td-band{background:linear-gradient(120deg,var(--red),var(--red-d));color:#fff;border-radius:24px;padding:50px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.td-band h2{color:#fff;font-size:clamp(26px,3.2vw,38px);font-weight:800;letter-spacing:-.5px;max-width:560px}
+.td-band p{color:rgba(255,255,255,.9);font-size:16px;margin-top:10px;max-width:520px;line-height:1.6}
+
+/* CALCULATOR */
+.calc{background:linear-gradient(180deg,#fff 0%,var(--soft) 100%)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:980px;margin:0 auto}
+.calc-card{background:#fff;border-radius:20px;border:1px solid var(--line);box-shadow:var(--shadow-l);padding:30px}
+.calc-card h3{font-weight:800;font-size:18px;margin-bottom:20px}
+.calc-card label{font-size:14px;font-weight:700;display:flex;justify-content:space-between;margin-bottom:12px}
+.calc-card label b{color:var(--red)}
+input[type=range]{-webkit-appearance:none;width:100%;height:6px;border-radius:6px;background:linear-gradient(90deg,var(--red) var(--p,40%),var(--line) var(--p,40%));outline:none;margin-bottom:22px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--red);border:4px solid #fff;box-shadow:0 2px 8px rgba(227,25,55,.4);cursor:pointer}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--red);border:4px solid #fff;cursor:pointer}
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin-bottom:8px}
+.vsbox{border-radius:12px;padding:14px;text-align:center}
+.vsbox.fuel{background:var(--gray)} .vsbox.ev{background:var(--soft);border:1.5px solid var(--red)}
+.vsbox .t{font-size:12px;color:var(--mid);font-weight:700;margin-bottom:6px}
+.vsbox.ev .t{color:var(--red)}
+.vsbox .v{font-size:22px;font-weight:800}.vsbox.ev .v{color:var(--red)}
+.vs .mid{color:#ccc;font-weight:800}
+.fine{font-size:11px;color:var(--mid);text-align:center;margin-top:10px;line-height:1.5}
+.result{background:var(--ink);color:#fff;border-radius:20px;padding:36px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.result .t{font-size:13px;font-weight:700;color:var(--red);letter-spacing:1px;text-transform:uppercase}
+.result .big{font-size:clamp(44px,7vw,68px);font-weight:800;line-height:1;margin:14px 0 2px}
+.result .pm{font-size:13px;color:#86868d}
+.result hr{width:70%;border:none;border-top:1px solid #2a2a30;margin:20px 0}
+.result .yr{font-size:30px;font-weight:800;color:var(--red)}
+.result .yl{font-size:12px;color:#86868d;margin-top:2px}
+.result .eur{margin-top:14px;font-size:13px;color:#fff;background:rgba(227,25,55,.2);border:1px solid var(--red);padding:7px 14px;border-radius:30px;font-weight:700}
+
+/* TESTIMONIALS */
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:.3s}
+.tc:hover{box-shadow:var(--shadow-l);transform:translateY(-4px)}
+.tc .q{font-size:46px;line-height:.6;color:var(--red);opacity:.22;font-weight:800;font-family:Georgia,serif}
+.tc p{font-size:15px;line-height:1.7;color:#2a2a2a;margin:8px 0 18px}
+.tc .who{display:flex;align-items:center;gap:11px}
+.tc .av{width:42px;height:42px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--red)}
+.tc .who b{font-size:14px}.tc .who span{display:block;font-size:12px;color:var(--mid)}
+
+/* FAQ */
+.faq{max-width:760px;margin:0 auto}
+.qa{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden;background:#fff;transition:.2s}
+.qa.open{border-color:var(--red);box-shadow:0 8px 24px rgba(227,25,55,.08)}
+.qa .q{padding:18px 22px;font-weight:700;font-size:16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:12px}
+.qa .ic{color:var(--red);font-size:24px;transition:.3s;flex-shrink:0}
+.qa.open .ic{transform:rotate(45deg)}
+.qa .a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--mid);font-size:15px;line-height:1.7}
+.qa .a div{padding:0 22px 20px}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.cform{background:#fff;border-radius:20px;border:1px solid var(--line);padding:32px;box-shadow:var(--shadow-l)}
+.cform .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:14px}
+.field label{font-size:13px;font-weight:700;display:block;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;font-family:inherit;font-size:15px;background:#fcfcfd;transition:.2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--red);background:#fff}
+.cinfo{display:flex;flex-direction:column;gap:14px}
+.cinfo .box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;gap:14px;align-items:flex-start}
+.cinfo .box .ic{width:46px;height:46px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.cinfo .box b{font-size:15px} .cinfo .box p{font-size:14px;color:var(--mid);margin-top:3px;line-height:1.5}
+.map{flex:1;min-height:170px;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;border:0;min-height:170px;filter:grayscale(.2)}
+
+/* FOOTER */
+footer{background:#0b0b0d;color:#fff;padding:56px 0 0;border-top:4px solid var(--red)}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:30px;padding-bottom:40px}
+.fcol h4{font-size:13px;color:var(--red);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.fcol a,.fcol p{display:block;color:#9a9aa2;font-size:14px;line-height:2;transition:.2s}
+.fcol a:hover{color:#fff}
+.flogo{height:28px;margin-bottom:12px}
+.fbot{border-top:1px solid #232328;padding:18px 0;text-align:center;font-size:13px;color:#6c6c72}
+.fbot a{color:var(--red)}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:80;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(37,211,102,.5);animation:pulse 2.4s infinite}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+/* TEST DRIVE MODAL */
+.modal{position:fixed;inset:0;z-index:200;background:rgba(8,8,10,.7);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-card{background:#fff;border-radius:22px;width:100%;max-width:880px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;box-shadow:var(--shadow-l);max-height:94vh}
+.modal-media{background:linear-gradient(160deg,#15151a,#0e0e10);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;position:relative}
+.modal-media .tag{position:absolute;top:18px;left:18px;font-size:11px;font-weight:800;letter-spacing:1px;color:#fff}
+.modal-media img{max-height:240px;object-fit:contain;filter:drop-shadow(0 18px 30px rgba(0,0,0,.5))}
+.modal-media .mname{margin-top:14px;font-weight:800;font-size:20px;color:#fff}
+.modal-form{padding:30px;overflow-y:auto;position:relative}
+.modal-form h3{font-size:22px;font-weight:800;letter-spacing:-.5px}
+.modal-form .subt{color:var(--mid);font-size:14px;margin:4px 0 18px}
+.modal-form .x{position:absolute;top:16px;right:18px;font-size:26px;color:var(--mid);cursor:pointer;line-height:1;background:none;border:none}
+.tf{margin-bottom:12px}.tf label{font-size:12px;font-weight:700;display:block;margin-bottom:5px;color:#2a2a2a}
+.tf input,.tf select{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:11px 13px;font-family:inherit;font-size:14px;background:#fcfcfd;transition:.2s}
+.tf input:focus,.tf select:focus{outline:none;border-color:var(--red);background:#fff}
+.tf-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.slots{display:flex;flex-wrap:wrap;gap:7px}
+.slot{border:1.5px solid var(--line);border-radius:9px;padding:8px 12px;font-size:13px;font-weight:700;cursor:pointer;background:#fff;transition:.15s}
+.slot:hover{border-color:var(--red)}.slot.active{background:var(--red);color:#fff;border-color:var(--red)}
+.modal-actions{display:flex;gap:10px;margin-top:16px}.modal-actions .btn{flex:1;justify-content:center}
+.td-ok{text-align:center;padding:30px 10px}.td-ok .chk{width:64px;height:64px;border-radius:50%;background:#eaf8ef;color:#25D366;display:flex;align-items:center;justify-content:center;font-size:34px;margin:0 auto 14px}
+
+@media(max-width:1000px){
+  .grid,.tech-grid,.tg{grid-template-columns:repeat(2,1fr)}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:18px 0}.stats-grid>div:nth-child(2){border:none}
+  .flag,.hero-grid,.calc-grid,.contact-grid,.spotlight{grid-template-columns:1fr}
+  .flag .txt{padding:40px 30px}.flag .media{min-height:280px;order:-1}
+  .spotlight .video-fac{order:-1}
+}
+@media(min-width:641px) and (max-width:760px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .tg{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){
+  .nav-links,.nav-cta .btn-ghost{display:none}
+  .burger{display:flex}
+  .mobile-menu{display:none;position:absolute;top:72px;left:0;right:0;background:#15151a;border-bottom:1px solid var(--line-d);flex-direction:column;padding:14px 24px;gap:6px;z-index:89}
+  .mobile-menu.open{display:flex}
+  .mobile-menu a{padding:12px 0;font-weight:700;border-bottom:1px solid var(--line-d);color:#fff;font-size:16px}
+  .mobile-menu a:last-child{border-bottom:none}
+  .grid,.tech-grid,.tg{grid-template-columns:1fr}
+  .hero-grid{min-height:auto;text-align:center}.hero p.lead{margin-left:auto;margin-right:auto}.hero-cta{justify-content:center}
+  .sec{padding:56px 0}.modal-card{grid-template-columns:1fr;max-width:440px}.modal-media{min-height:170px;order:-1}.modal-media img{max-height:150px}
+  .td-band{padding:34px}
+  .flag .txt{padding:28px 20px}
+  .hero-badge{display:none}
+  .cinfo .box{padding:16px}
+  .fgrid{grid-template-columns:1fr 1fr;gap:20px}
+  .fbot{font-size:12px;padding:14px 16px}
+}
+@media(max-width:480px){
+  .fgrid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .calc-grid{grid-template-columns:1fr}
+  .calc-grid .result{border-radius:16px}
+  .btn{font-size:14px;padding:11px 20px}
+  .modal-form{padding:20px 18px}
+  .modal-actions{flex-direction:column}
+  .td-band{border-radius:16px;padding:26px}
+  .td-band h2{font-size:22px}
+  .slots{gap:5px}
+  .slot{padding:7px 10px;font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo"><img src="img/logo.png" alt="TAILG"><span>МАКЕДОНИЈА</span></a>
+    <nav class="nav-links">
+      <a href="#modeli">Модели</a><a href="#shark">Shark</a><a href="#tehnologija">Технологија</a>
+      <a href="#probno">Пробно возење</a><a href="#kalkulator">Калкулатор</a><a href="#kontakt">Контакт</a>
+    </nav>
+    <div class="nav-cta">
+      <a onclick="openTestDrive()" class="btn btn-ghost" style="cursor:pointer">Пробно возење</a>
+      <a href="https://wa.me/389XXXXXXXX" class="btn btn-wa">WhatsApp</a>
+    </div>
+    <div class="burger" onclick="toggleMM()"><span></span><span></span><span></span></div>
+  </div>
+  <div class="mobile-menu" id="mm">
+    <a href="#modeli" onclick="closeMM()">Модели</a><a href="#shark" onclick="closeMM()">Shark</a>
+    <a href="#tehnologija" onclick="closeMM()">Технологија</a><a onclick="closeMM();openTestDrive()" style="cursor:pointer">Пробно возење</a>
+    <a href="#kalkulator" onclick="closeMM()">Калкулатор</a><a href="#kontakt" onclick="closeMM()">Контакт</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal in">
+      <div class="eyebrow">TAILG · ОФИЦИЈАЛЕН ДИСТРИБУТЕР</div>
+      <h1>Освој го<br><span class="rotator" id="rot">теренот</span></h1>
+      <p class="lead">TAILG Shark и целата гама електрични возила — сега официјално во Македонија. Најдолг дострел, најниска цена на возење.</p>
+      <div class="hero-cta">
+        <a href="#shark" class="btn btn-light">Запознај го Shark →</a>
+        <a onclick="openTestDrive('shark')" class="btn btn-ghost" style="cursor:pointer">Закажи пробно возење</a>
+      </div>
+    </div>
+    <div class="hero-media reveal in">
+      <div class="glow"></div>
+      <img src="img/shark-main.png" alt="TAILG Shark електричен велосипед" loading="eager" fetchpriority="high">
+      <div class="hero-badge b1"><div class="dot">🏔️</div><div>20×4.0<small>fat-tire теренски</small></div></div>
+      <div class="hero-badge b2"><div class="dot">⚙️</div><div>Shimano<small>7 брзини</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div><div class="n" data-count="12"><span data-suffix>0</span><span class="u">M+</span></div><div class="l">Производство годишно</div></div>
+    <div><div class="n" data-count="90"><span data-suffix>0</span><span class="u">+</span></div><div class="l">Земји во светот</div></div>
+    <div><div class="n" data-count="2000"><span data-suffix>0</span><span class="u">+</span></div><div class="l">Патенти</div></div>
+    <div><div class="n" style="font-size:28px">🤝 UN</div><div class="l">Партнер за е-мобилност</div></div>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<section class="sec" id="modeli">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">НАШАТА ЛИНИЈА</div>
+      <h2>Најди го твојот TAILG</h2>
+      <p>Спорт е-байк, мотоцикли и скутери — секој со бесплатно пробно возење.</p>
+    </div>
+    <div class="filters reveal" id="filters">
+      <button class="active" data-f="all">Сите</button>
+      <button data-f="bike">Спорт е-байк</button>
+      <button data-f="moto">Е-Мотоцикли</button>
+      <button data-f="scooter">Е-Скутери</button>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="fine" style="margin-top:26px">* Сите цени се ориентациони и подлежат на промена. За точна понуда — контактирај нè.</p>
+  </div>
+</section>
+
+<!-- LIFESTYLE GALLERY -->
+<section class="sec gray" id="lifestyle" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="eyebrow">СОЗДАДЕНИ ЗА ЖИВОТ</div><h2>Возење во секој амбиент</h2><p>Од планински терен до стариот град — TAILG секаде се чувствува како дома.</p></div>
+    <div class="life-grid reveal" id="lifeGrid"></div>
+  </div>
+</section>
+
+<!-- SHARK SPOTLIGHT + VIDEO -->
+<section class="sec dark" id="shark">
+  <div class="wrap">
+    <div class="spotlight reveal">
+      <div class="video-fac" id="sharkVideo" onclick="playVideo('4dhUSS6tPDQ',this)">
+        <img src="img/shark-video.jpg" alt="TAILG Shark видео">
+        <div class="play"><span></span></div>
+      </div>
+      <div class="txt">
+        <div class="eyebrow">ГЛАВЕН МОДЕЛ · TAILG SHARK</div>
+        <h2>Освојувач на теренот</h2>
+        <p>Sport fat-tire е-байк создаден за град, плажа и планина. Shimano 7-брзински менувач, хидраулични диск сопирачки и 20×4.0 теренски гуми што се справуваат со секоја подлога.</p>
+        <div class="specrow">
+          <div><b>750W</b><span>Мотор</span></div>
+          <div><b>45 км/ч</b><span>Брзина</span></div>
+          <div><b>20×4.0</b><span>Fat-tire</span></div>
+        </div>
+        <div class="fcta">
+          <a href="model.html?id=shark" class="btn btn-red">Целосни спецификации →</a>
+          <a onclick="openTestDrive('shark')" class="btn btn-ghost" style="cursor:pointer">Пробно возење</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH -->
+<section class="sec dark" id="tehnologija" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">ТЕХНОЛОГИЈА</div>
+      <h2>Технологија што те носи подалеку</h2>
+      <p>17 години иновации во долгодострелни електрични возила.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card reveal"><div class="ic">🔋</div><h3>Графенска батерија</h3><p>1000+ циклуси на полнење, отпорна на екстремни температури. Полнење за 4–8 часа зависно од моделот.</p></div>
+      <div class="tech-card reveal"><div class="ic">☁️</div><h3>Долг дострел</h3><p>Паметно управување со енергијата — едно полнење, подолг пат. До 161 км кај флагман моделите.</p></div>
+      <div class="tech-card reveal"><div class="ic">⚙️</div><h3>Моќен погон</h3><p>До 5000W моќност и 24° наклон без напор. Силна динамика за град и отворен пат.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FLAGSHIP S91 -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="flag reveal">
+      <div class="txt">
+        <div class="eyebrow">ФЛАГМАН · TAILG S91 PRO</div>
+        <h2>Создаден да доминира</h2>
+        <div class="specrow"><div><b>5000W</b><span>Мотор</span></div><div><b>161 км</b><span>Дострел</span></div><div><b>110 км/ч</b><span>Брзина</span></div></div>
+        <p>Двојни диск ABS сопирачки, камери пред и зад, литиум батерија со брзо полнење за 4–6 часа.</p>
+        <div class="fcta">
+          <a href="model.html?id=s91pro" class="btn btn-red">Целосни спецификации →</a>
+          <a onclick="openTestDrive('s91pro')" class="btn btn-ghost" style="cursor:pointer">Пробно возење</a>
+        </div>
+      </div>
+      <div class="media"><img src="img/s91pro-premium.jpg" alt="TAILG S91 Pro" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="sec calc" id="kalkulator">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="eyebrow">КАЛКУЛАТОР НА ЗАШТЕДА</div><h2>Колку штедиш со TAILG?</h2><p>Спореди го трошокот на бензин наспроти електрика — годишно.</p></div>
+    <div class="calc-grid reveal">
+      <div class="calc-card">
+        <h3>Твоите навики на возење</h3>
+        <label>Дневни километри <b id="kmLabel">30 км</b></label>
+        <input type="range" id="km" min="5" max="120" value="30" step="5">
+        <div class="vs">
+          <div class="vsbox fuel"><div class="t">⛽ Бензин / месец</div><div class="v" id="fuelM">4.500 ден</div></div>
+          <div class="mid">vs</div>
+          <div class="vsbox ev"><div class="t">⚡ TAILG / месец</div><div class="v" id="evM">450 ден</div></div>
+        </div>
+        <div class="fine">~85 ден/л бензин · ~5,5 ден/kWh струја · просечна потрошувачка 4 л/100 км. Ориентациони вредности.</div>
+      </div>
+      <div class="result"><div class="t">Твоја заштеда</div><div class="big" id="savM">4.050</div><div class="pm">денари месечно</div><hr><div class="yr" id="savY">48.600 ден</div><div class="yl">годишна заштеда</div><div class="eur" id="savE">≈ €790 годишно</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEST DRIVE BAND -->
+<section class="sec" style="padding-top:0" id="probno">
+  <div class="wrap"><div class="td-band reveal">
+    <div><h2>Прво вози, па одлучи.</h2><p>Закажи бесплатно пробно возење за кој било модел. Без обврска.</p></div>
+    <a onclick="openTestDrive()" class="btn btn-light" style="cursor:pointer">📅 Закажи пробно возење</a>
+  </div></div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec red">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="eyebrow">ЗАДОВОЛНИ ВОЗАЧИ</div><h2>Што велат корисниците</h2></div>
+    <div class="tg">
+      <div class="tc reveal"><div class="q">"</div><p>Полнам преку ноќ, возам цела недела. Најдобрата инвестиција за градско возење досега.</p><div class="who"><div class="av">М</div><div><b>Марко Т.</b><span>Скопје · F55</span></div></div></div>
+      <div class="tc reveal"><div class="q">"</div><p>Со Shark одам и на планина и во град. Fat-tire гумите се справуваат со сè. Феноменално.</p><div class="who"><div class="av">А</div><div><b>Ана М.</b><span>Скопје · Shark</span></div></div></div>
+      <div class="tc reveal"><div class="q">"</div><p>За достава во центар е идеално. Заштедувам преку 40.000 ден годишно на гориво.</p><div class="who"><div class="av">Б</div><div><b>Бобан К.</b><span>Скопје · GR50</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap"><div class="sec-head reveal"><div class="eyebrow">ЧЕСТО ПОСТАВУВАНИ ПРАШАЊА</div><h2>Сè што треба да знаеш</h2></div><div class="faq reveal" id="faqList"></div></div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec soft" id="kontakt">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="eyebrow">КОНТАКТ</div><h2>Побарај понуда</h2><p>Остави порака и ќе те контактираме со точна цена и достапност.</p></div>
+    <div class="contact-grid reveal">
+      <form class="cform" onsubmit="return sendForm(event)">
+        <div class="row"><div class="field"><label>Име и презиме</label><input required placeholder="Твоето име"></div><div class="field"><label>Телефон</label><input required placeholder="+389 7X XXX XXX"></div></div>
+        <div class="field"><label>Е-пошта</label><input type="email" placeholder="ime@email.com"></div>
+        <div class="field"><label>Модел од интерес</label><select id="modelSel"><option value="">Кој модел те интересира?</option></select></div>
+        <div class="field"><label>Порака</label><textarea rows="3" placeholder="Прашања, боја, начин на плаќање..."></textarea></div>
+        <button class="btn btn-red" type="submit" style="width:100%;justify-content:center">Испрати порака</button>
+        <p class="fine" style="margin-top:12px">Или директно на <a href="https://wa.me/389XXXXXXXX" style="color:var(--red);font-weight:700">WhatsApp →</a></p>
+      </form>
+      <div class="cinfo">
+        <div class="box"><div class="ic">📍</div><div><b>Шоурум</b><p>Скопје, Македонија <span style="font-size:12px">(адреса се додава)</span></p></div></div>
+        <div class="box"><div class="ic">📞</div><div><b>Телефон</b><p>+389 XX XXX XXX</p></div></div>
+        <div class="box"><div class="ic">⏰</div><div><b>Работно време</b><p>Пон–Саб: 10:00–19:00</p></div></div>
+        <div class="map"><iframe loading="lazy" src="https://www.google.com/maps?q=Skopje,North+Macedonia&output=embed" title="Локација Скопје"></iframe></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap fgrid">
+    <div class="fcol"><img src="img/logo.png" class="flogo" alt="TAILG Македонија"><p>Електрични возила.<br>Официјален и ексклузивен дистрибутер на TAILG во Македонија.</p></div>
+    <div class="fcol"><h4>Модели</h4><a href="model.html?id=shark">Shark</a><a href="model.html?id=f55">F55</a><a href="model.html?id=s91pro">S91 Pro</a><a href="model.html?id=f52">F52</a><a href="model.html?id=gr50">GR50</a><a href="model.html?id=js30">JS30</a></div>
+    <div class="fcol"><h4>Навигација</h4><a href="#tehnologija">Технологија</a><a onclick="openTestDrive()" style="cursor:pointer">Пробно возење</a><a href="#kalkulator">Калкулатор</a><a href="#faq">ЧПП</a></div>
+    <div class="fcol"><h4>Контакт</h4><p>📍 Скопје, Македонија</p><p>📞 +389 XX XXX XXX</p><a href="https://wa.me/389XXXXXXXX">💬 WhatsApp</a><a href="mailto:info@tailg.mk">📧 info@tailg.mk</a></div>
+  </div>
+  <div class="fbot">© 2026 TAILG Македонија · Сите права задржани · Дизајн и систем: <a href="#">NEXUS AI Marketing</a></div>
+</footer>
+
+<!-- TEST DRIVE MODAL -->
+<div class="modal" id="tdModal" onclick="if(event.target===this)closeTestDrive()">
+  <div class="modal-card">
+    <div class="modal-media"><div class="tag">ПРОБНО ВОЗЕЊЕ</div><img id="tdImg" src="img/shark-main.png" alt=""><div class="mname" id="tdName">Избери модел</div></div>
+    <div class="modal-form">
+      <button class="x" onclick="closeTestDrive()" aria-label="Затвори">×</button>
+      <div id="tdBody">
+        <h3>Закажи пробно возење</h3>
+        <div class="subt">Бесплатно, без обврска. Ќе те контактираме за потврда.</div>
+        <form onsubmit="return submitTD(event)">
+          <div class="tf-row"><div class="tf"><label>Име и презиме</label><input required placeholder="Твоето име"></div><div class="tf"><label>Телефон</label><input required placeholder="+389 7X XXX XXX"></div></div>
+          <div class="tf"><label>Модел</label><select id="tdModel" onchange="syncTDImg()"></select></div>
+          <div class="tf-row"><div class="tf"><label>Датум</label><input type="date" id="tdDate" required></div><div class="tf"><label>Град</label><input value="Скопје" required></div></div>
+          <div class="tf"><label>Преферирано време</label><div class="slots" id="tdSlots"></div></div>
+          <div class="modal-actions"><button type="submit" class="btn btn-red">Потврди термин</button><a id="tdWa" href="#" class="btn btn-wa">💬 WhatsApp</a></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="https://wa.me/389XXXXXXXX" class="wa-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.911zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "TAILG Македонија",
+  "description": "Официјален и ексклузивен дистрибутер на TAILG електрични возила во Македонија. Shark, F55, S91 Pro, F52, GR50, JS30.",
+  "url": "https://tailg.mk",
+  "logo": "https://tailg.mk/img/logo.png",
+  "image": "https://tailg.mk/img/shark-main.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Скопје",
+    "addressCountry": "MK"
+  },
+  "openingHours": "Mo-Sa 10:00-19:00",
+  "priceRange": "дд",
+  "email": "info@tailg.mk",
+  "sameAs": ["https://tailg.mk"]
+}
+</script>
+<script src="catalog.js"></script>
+<script>
+const burger=document.querySelector('.burger');
+function closeMM(){document.getElementById('mm').classList.remove('open');burger.classList.remove('open');}
+function toggleMM(){const mm=document.getElementById('mm');const open=mm.classList.toggle('open');burger.classList.toggle('open',open);}
+document.addEventListener('click',e=>{const mm=document.getElementById('mm');if(mm.classList.contains('open')&&!mm.contains(e.target)&&!burger.contains(e.target))closeMM();});
+const catLabel={bike:"Спорт е-байк",moto:"Е-Мотоцикл",scooter:"Е-Скутер"};
+const words=["теренот","градот","патот","иднината"];let wi=0;
+setInterval(()=>{wi=(wi+1)%words.length;const r=document.getElementById('rot');r.style.opacity=0;setTimeout(()=>{r.textContent=words[wi];r.style.opacity=1},220)},2200);
+
+function playVideo(id,el){el.innerHTML=`<iframe width="100%" height="100%" style="position:absolute;inset:0;border:0;border-radius:20px" src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0" title="TAILG Shark" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;el.onclick=null;}
+
+const grid=document.getElementById('grid');
+function chipsFor(m){const s=m.specs;return ["Мотор","Макс. брзина","Дострел"].filter(k=>s[k]).map(k=>`<span class="chip">${k==="Мотор"?"⚡":k==="Дострел"?"🔋":"🏎"} ${s[k]}</span>`).join("");}
+function render(filter){grid.innerHTML="";TAILG_CATALOG.filter(m=>filter==="all"||m.category===filter).forEach(m=>{
+  const el=document.createElement('div');el.className="card";
+  el.innerHTML=`<div class="cbar"></div>${m.badge?`<div class="badge">${m.badge}</div>`:""}
+    <div class="imgwrap"><img src="${m.image}" alt="TAILG ${m.name}" loading="lazy"></div>
+    <div class="body"><div class="cat">${catLabel[m.category]}</div><div class="name">${m.name}</div><div class="tag">${m.tagline}</div>
+    <div class="chips">${chipsFor(m)}</div><div class="price">${tailgPrice(m.price)}<small>* ориентациона цена</small></div>
+    <div class="actions"><a class="btn btn-red btn-sm" href="model.html?id=${m.id}">Детали</a><a class="btn btn-ghost-d btn-sm" style="cursor:pointer" onclick="openTestDrive('${m.id}')">Пробно</a></div></div>
+    <a class="cover" href="model.html?id=${m.id}" aria-label="${m.name}"></a>`;
+  grid.appendChild(el);});}
+render("all");
+(function(){const lg=document.getElementById('lifeGrid');if(lg)TAILG_CATALOG.forEach(m=>{const a=document.createElement('a');a.className="life-card";a.href="model.html?id="+m.id;a.innerHTML=`<img src="img/${m.id}-scene.jpg" alt="TAILG ${m.name}" loading="lazy" onerror="this.parentNode.style.display='none'"><div class="life-ov"><b>${m.name}</b><span>${m.tagline}</span></div>`;lg.appendChild(a);});})();
+document.querySelectorAll('#filters button').forEach(b=>{b.onclick=()=>{document.querySelectorAll('#filters button').forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.dataset.f);};});
+
+const sel=document.getElementById('modelSel'),tdSel=document.getElementById('tdModel');
+TAILG_CATALOG.forEach(m=>{const o=document.createElement('option');o.value=m.name;o.textContent=`${catLabel[m.category]} — ${m.name}`;sel.appendChild(o);const o2=document.createElement('option');o2.value=m.id;o2.textContent=m.name;tdSel.appendChild(o2);});
+
+const TIMES=["10:00","11:30","13:00","15:00","16:30","18:00"];let tdTime=TIMES[0];
+const sw=document.getElementById('tdSlots');
+TIMES.forEach((t,i)=>{const s=document.createElement('div');s.className="slot"+(i===0?" active":"");s.textContent=t;s.onclick=()=>{document.querySelectorAll('.slot').forEach(x=>x.classList.remove('active'));s.classList.add('active');tdTime=t;};sw.appendChild(s);});
+document.getElementById('tdDate').min=new Date().toISOString().split('T')[0];
+function syncTDImg(){const m=TAILG_CATALOG.find(x=>x.id===tdSel.value);if(m){document.getElementById('tdImg').src=m.image;document.getElementById('tdName').textContent="TAILG "+m.name;document.getElementById('tdWa').href="https://wa.me/389XXXXXXXX?text="+encodeURIComponent("Здраво! Сакам пробно возење за TAILG "+m.name+".");}}
+function openTestDrive(id){document.querySelector('#tdBody form')?.reset?.();if(id)tdSel.value=id;syncTDImg();document.getElementById('tdModal').classList.add('open');document.body.style.overflow="hidden";}
+function closeTestDrive(){document.getElementById('tdModal').classList.remove('open');document.body.style.overflow="";}
+function submitTD(e){e.preventDefault();const m=TAILG_CATALOG.find(x=>x.id===tdSel.value);const dt=document.getElementById('tdDate').value;
+  document.getElementById('tdBody').innerHTML=`<div class="td-ok"><div class="chk">✓</div><h3>Терминот е примен!</h3><div class="subt">Бараше пробно возење за <b>TAILG ${m?m.name:""}</b>${dt?` на ${dt}`:""} во ${tdTime}.<br>Ќе те контактираме за потврда.</div><button class="btn btn-red" style="margin-top:14px" onclick="closeTestDrive()">Во ред</button><p class="fine" style="margin-top:12px">Демо: поврзи со е-пошта/CRM/календар пред пуштање во живо.</p></div>`;return false;}
+
+const faqs=[
+  ["Дали ми треба возачка дозвола?","Зависи од моделот и брзината. Е-байкот Shark и побавните скутери најчесто не бараат дозвола; помоќните е-мотоцикли се регистрираат како мопед/мотоцикл. Ние ти кажуваме точно за моделот."],
+  ["Колку чини полнење на батеријата?","Едно целосно полнење чини приближно 30–60 денари струја — до 90% поевтино од истиот пат со бензин."],
+  ["Каква е гаранцијата?","24 месеци на моторот, 18 месеци на батеријата и 15 месеци на контролерот. Сервис и делови локално во Скопје."],
+  ["Дали може на рати?","Да. Нудиме повеќе опции за плаќање — контактирај нè за актуелните услови."],
+  ["Каде можам да го сервисирам?","Сервисот е локален во Скопје, со оригинални TAILG резервни делови."],
+  ["Како да закажам пробно возење?","Кликни „Закажи пробно возење“, избери модел и термин — бесплатно е и без обврска."]
+];
+const fl=document.getElementById('faqList');
+faqs.forEach(([q,a])=>{const dv=document.createElement('div');dv.className="qa";dv.innerHTML=`<div class="q">${q}<span class="ic">+</span></div><div class="a"><div>${a}</div></div>`;
+  dv.querySelector('.q').onclick=()=>{const open=dv.classList.contains('open');document.querySelectorAll('.qa').forEach(x=>{x.classList.remove('open');x.querySelector('.a').style.maxHeight=null;});if(!open){dv.classList.add('open');const aa=dv.querySelector('.a');aa.style.maxHeight=aa.scrollHeight+"px";}};fl.appendChild(dv);});
+
+const km=document.getElementById('km');const PETROL=85,CONS=4/100,EV_KWH=0.025,KWH=5.5,EUR=61.5;
+function calc(){const x=+km.value;km.style.setProperty('--p',((x-5)/(120-5)*100)+"%");document.getElementById('kmLabel').textContent=x+" км";
+  const mk=x*30,fuel=Math.round(mk*CONS*PETROL),ev=Math.round(mk*EV_KWH*KWH),sav=fuel-ev,savY=sav*12,f=n=>n.toLocaleString("de-DE");
+  document.getElementById('fuelM').textContent=f(fuel)+" ден";document.getElementById('evM').textContent=f(ev)+" ден";document.getElementById('savM').textContent=f(sav);document.getElementById('savY').textContent=f(savY)+" ден";document.getElementById('savE').textContent="≈ €"+f(Math.round(savY/EUR))+" годишно";}
+km.oninput=calc;calc();
+function sendForm(e){e.preventDefault();alert("Благодариме! Пораката е примена — ќе те контактираме наскоро.\\n\\n(Демо: поврзи со е-пошта или CRM пред пуштање во живо.)");e.target.reset();return false;}
+
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const cio=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){const el=e.target,target=+el.dataset.count,suf=el.querySelector('[data-suffix]');let cur=0,step=target/45;const t=setInterval(()=>{cur+=step;if(cur>=target){cur=target;clearInterval(t);}const v=Math.round(cur).toLocaleString("de-DE");if(suf)suf.textContent=v;else el.firstChild.textContent=v;},22);cio.unobserve(el);}}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+document.addEventListener('keydown',e=>{if(e.key==="Escape")closeTestDrive();});
+</script>
+</body>
+</html>
