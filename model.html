@@ -195,12 +195,12 @@ footer p{color:#7a7a7f;font-size:13px}
 
 <script src="catalog.js"></script>
 <script>
-const catLabel={bike:"Спорт е-байк",moto:"Е-Мотоцикл",scooter:"Е-Скутер"};
+const catLabel={bike:"Спортски е-велосипед",moto:"Е-Мотоцикл",scooter:"Е-Скутер"};
 const COLORS={bike:["#1c1c1c","#E31937","#f5f5f5"],moto:["#1c1c1c","#E31937","#f5f5f5","#2E5090"],scooter:["#f5f5f5","#1c1c1c","#E31937"]};
 const params=new URLSearchParams(location.search);
 const id=params.get('id')||TAILG_CATALOG[0].id;
 const m=TAILG_CATALOG.find(x=>x.id===id)||TAILG_CATALOG[0];
-const catLabelMeta={bike:"Спорт е-байк",moto:"Е-Мотоцикл",scooter:"Е-Скутер"};
+const catLabelMeta={bike:"Спортски е-велосипед",moto:"Е-Мотоцикл",scooter:"Е-Скутер"};
 const metaDesc=`TAILG ${m.name} — ${m.tagline}. ${m.specs["Мотор"]?m.specs["Мотор"]+", ":""}${m.specs["Дострел"]||""}${m.specs["Дострел"]?" дострел. ":""}Официјален дистрибутер во Македонија. Бесплатно пробно возење.`;
 document.title=`TAILG ${m.name} — ${m.tagline} | TAILG Македонија`;
 document.querySelector('meta[name="description"]').content=metaDesc;
@@ -220,7 +220,7 @@ while(ks.length<3){const ex=Object.entries(m.specs).find(([k])=>!ks.some(x=>x[0]
 
 const feats=[
   ["🏍️","Моќ без компромис",m.specs["Мотор"]?`${m.specs["Мотор"]} мотор${m.specs["Наклон"]?`, искачува ${m.specs["Наклон"]} наклон`:""}. Силна динамика за град и пат.`:"Силен магнетен мотор за стабилна динамика."],
-  ["🔋","Возиш подолго",m.specs["Дострел"]?`${m.specs["Дострел"]} на едно полнење${m.specs["Батерија"]?`. ${m.specs["Батерија"]}`:""}.`:"Долгодострелна TAILG технологија."],
+  ["🔋","Возиш подолго",m.specs["Дострел"]?`${m.specs["Дострел"]} на едно полнење${m.specs["Батерија"]?`. ${m.specs["Батерија"]}`:""}.`:"TAILG технологија со долг дострел."],
   ["🛡️","Безбедно секогаш",m.specs["Сопирачки"]?`${m.specs["Сопирачки"]}${m.specs["Гуми"]?`. Гуми ${m.specs["Гуми"]}`:""}.`:"Сигурни сопирачки и осветлување."]
 ];
 
