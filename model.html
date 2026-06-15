@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TAILG Македонија — Модел</title>
+<title>TAILG Македонија · Модел</title>
 <meta name="description" content="Детали и спецификации за TAILG електрично возило. Официјален дистрибутер во Македонија. Закажи бесплатно пробно возење.">
 <meta property="og:type" content="product">
 <meta property="og:site_name" content="TAILG Македонија">
-<meta property="og:title" content="TAILG Македонија — Модел">
+<meta property="og:title" content="TAILG Македонија · Модел">
 <meta property="og:description" content="Детали и спецификации за TAILG електрично возило.">
 <meta property="og:image" content="img/shark-main.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -201,10 +201,10 @@ const params=new URLSearchParams(location.search);
 const id=params.get('id')||TAILG_CATALOG[0].id;
 const m=TAILG_CATALOG.find(x=>x.id===id)||TAILG_CATALOG[0];
 const catLabelMeta={bike:"Спортски е-велосипед",moto:"Е-Мотоцикл",scooter:"Е-Скутер"};
-const metaDesc=`TAILG ${m.name} — ${m.tagline}. ${m.specs["Мотор"]?m.specs["Мотор"]+", ":""}${m.specs["Дострел"]||""}${m.specs["Дострел"]?" дострел. ":""}Официјален дистрибутер во Македонија. Бесплатно пробно возење.`;
-document.title=`TAILG ${m.name} — ${m.tagline} | TAILG Македонија`;
+const metaDesc=`TAILG ${m.name} · ${m.tagline}. ${m.specs["Мотор"]?m.specs["Мотор"]+", ":""}${m.specs["Дострел"]||""}${m.specs["Дострел"]?" дострел. ":""}Официјален дистрибутер во Македонија. Бесплатно пробно возење.`;
+document.title=`TAILG ${m.name} · ${m.tagline} | TAILG Македонија`;
 document.querySelector('meta[name="description"]').content=metaDesc;
-document.querySelector('meta[property="og:title"]').content=`TAILG ${m.name} — TAILG Македонија`;
+document.querySelector('meta[property="og:title"]').content=`TAILG ${m.name} · TAILG Македонија`;
 document.querySelector('meta[property="og:description"]').content=metaDesc;
 document.querySelector('meta[property="og:image"]').content=m.image;
 document.querySelector('link[rel="canonical"]').href=`model.html?id=${m.id}`;
@@ -240,7 +240,7 @@ document.getElementById('app').innerHTML=`
     <div class="tagline">${m.tagline}</div>
     <div class="kspec">${ks.map(([k,v])=>`<div class="b"><b>${v}</b><span>${k}</span></div>`).join("")}</div>
     <div class="swatches"><span>Боја:</span>${(COLORS[m.category]||["#1c1c1c"]).map((c,i)=>`<div class="dot ${i===0?'active':''}" style="background:${c}" onclick="this.parentNode.querySelectorAll('.dot').forEach(d=>d.classList.remove('active'));this.classList.add('active')"></div>`).join("")}<small style="color:var(--mid);font-size:11px">(достапност по барање)</small></div>
-    <div class="price-row"><div class="p">${tailgPrice(m.price)}</div><div class="note">* ориентациона цена — подлежи на промена</div></div>
+    <div class="price-row"><div class="p">${tailgPrice(m.price)}</div><div class="note">* ориентациона цена, подлежи на промена</div></div>
     <div class="ctas">
       <a onclick="openTestDrive('${m.id}')" class="btn btn-red" style="cursor:pointer">📅 Закажи пробно возење</a>
       <a href="${waMsg}" class="btn btn-wa">💬 WhatsApp</a>
@@ -287,7 +287,7 @@ ${m.video?`<section class="sec" style="background:#0e0e10;color:#fff">
 <section class="sec">
   <div class="cta-band">
     <h2>Подготвен за ${m.name}?</h2>
-    <p>Закажи бесплатно пробно возење или побарај понуда — без обврска.</p>
+    <p>Закажи бесплатно пробно возење или побарај понуда. Без обврска.</p>
     <div class="ctas">
       <a onclick="openTestDrive('${m.id}')" class="btn btn-red" style="cursor:pointer">📅 Пробно возење</a>
       <a href="${waMsg}" class="btn btn-wa">💬 WhatsApp</a>
