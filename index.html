@@ -11,8 +11,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Macedonia_Square%2C_Skopje_%2850382973778%29.jpg/1280px-Macedonia_Square%2C_Skopje_%2850382973778%29.jpg">
-<link rel="preload" as="image" href="https://tailg.com/uploadimg/image/20240827/20240827154452_11178.png">
 
 <style>
 :root{
@@ -56,8 +54,9 @@ header{position:sticky;top:0;z-index:90;background:rgba(14,14,16,.82);backdrop-f
 .mobile-menu{display:none}
 
 /* HERO — dark */
-.hero{position:relative;background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Macedonia_Square%2C_Skopje_%2850382973778%29.jpg/1280px-Macedonia_Square%2C_Skopje_%2850382973778%29.jpg") center 30%/cover no-repeat;color:#fff;overflow:hidden}
+.hero{position:relative;background:#06060a;color:#fff;overflow:hidden}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,6,10,.93) 0%,rgba(6,6,10,.85) 35%,rgba(6,6,10,.45) 60%,rgba(6,6,10,.15) 100%);z-index:1}
+.hero-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;background:#06060a}
 .life-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .life-card{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:16/10;display:block;border:1px solid var(--line)}
 .life-card img{width:100%;height:100%;object-fit:cover;transition:.5s}
@@ -344,6 +343,9 @@ footer{background:#0b0b0d;color:#fff;padding:56px 0 0;border-top:4px solid var(-
 
 <!-- HERO -->
 <section class="hero">
+  <video class="hero-bg-video" autoplay muted loop playsinline preload="auto">
+    <source src="img/t70-hero.mp4" type="video/mp4">
+  </video>
   <div class="wrap hero-grid">
     <div class="reveal in">
       <div class="eyebrow">TAILG · ОФИЦИЈАЛЕН ДИСТРИБУТЕР · СКОПЈЕ</div>
@@ -358,9 +360,6 @@ footer{background:#0b0b0d;color:#fff;padding:56px 0 0;border-top:4px solid var(-
         <a href="#t70" class="btn btn-red">Запознај го T70 →</a>
         <a onclick="openTestDrive('t70')" class="btn btn-ghost" style="cursor:pointer">Закажи пробно возење</a>
       </div>
-    </div>
-    <div class="hero-vehicle reveal in">
-      <img src="https://tailg.com/uploadimg/image/20240827/20240827154452_11178.png" alt="TAILG T70 електричен мотоцикл" loading="eager">
     </div>
   </div>
 </section>
