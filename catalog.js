@@ -56,14 +56,14 @@ const TAILG_CATALOG = [
     tagline: "2000W сила, 90 км дострел",
     badge: "НОВО",
     price: null,
-    image: "https://tailg.com/uploadimg/image/20240827/20240827154452_11178.png",
+    image: "img/t70-main.png",
     gallery: [
-      "https://tailg.com/uploadimg/image/20240827/20240827154452_11178.png",
-      "https://tailg.com/uploadimg/image/20240913/20240913234200_81282.png",
-      "https://tailg.com/uploadimg/image/20240913/20240913234200_38471.png",
-      "https://tailg.com/uploadimg/image/20240913/20240913234200_71344.png",
-      "https://tailg.com/uploadimg/image/20240913/20240913142556_41549.png",
-      "https://tailg.com/uploadimg/image/20240913/20240913142555_78035.png"
+      "img/t70-main.png",
+      "img/t70-1.png",
+      "img/t70-2.png",
+      "img/t70-3.png",
+      "img/t70-4.png",
+      "img/t70-5.png"
     ],
     specs: {
       "Мотор": "2000W", "Макс. брзина": "60 км/ч", "Дострел": "90 км",
@@ -76,14 +76,14 @@ const TAILG_CATALOG = [
     id: "jy32", name: "JY32", category: "scooter",
     tagline: "Урбан придружник за секој ден",
     price: null,
-    image: "https://tailg.com/uploadimg/image/20240913/20240913161250_88167.png",
+    image: "img/jy32-main.png",
     gallery: [
-      "https://tailg.com/uploadimg/image/20240913/20240913161250_88167.png",
-      "https://tailg.com/uploadimg/image/20240913/20240913161128_66730.png",
-      "https://tailg.com/uploadimg/image/20240913/20240913161128_39830.png",
-      "https://tailg.com/uploadimg/image/20240913/20240913161129_47567.png",
-      "https://tailg.com/uploadimg/image/20240913/20240913195552_76170.png",
-      "https://tailg.com/uploadimg/image/20240913/20240913195552_86690.png"
+      "img/jy32-main.png",
+      "img/jy32-1.png",
+      "img/jy32-2.png",
+      "img/jy32-3.png",
+      "img/jy32-4.png",
+      "img/jy32-5.png"
     ],
     specs: {
       "Мотор": "400W", "Макс. брзина": "25 км/ч", "Дострел": "50 км",
