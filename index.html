@@ -349,8 +349,8 @@ footer{background:#0b0b0d;color:#fff;padding:56px 0 0;border-top:4px solid var(-
   <div class="wrap hero-grid">
     <div class="reveal in">
       <div class="eyebrow">TAILG · ОФИЦИЈАЛЕН ДИСТРИБУТЕР · СКОПЈЕ</div>
-      <h1>Заглавен<br><span class="rotator" id="rot">секој ден?</span></h1>
-      <p class="lead">Т70 е одговорот на секојдневните проблеми на Скопје — без задршки, без паркинг, без гориво.</p>
+      <h1>Секое утро,<br><span class="rotator" id="rot">истата гужва.</span></h1>
+      <p class="lead">Не мора да биде вака. T70 те носи низ Скопје — без задршки, без паркинг, без гориво.</p>
       <div class="problem-list">
         <div class="prob"><span class="prob-icon">🚗</span><div><b>Задршки секој ден</b><span>T70 поминува таму каде автото е заглавено</span></div></div>
         <div class="prob"><span class="prob-icon">🅿️</span><div><b>Паркинг е кошмар</b><span>Паркираш каде сакаш — секогаш, бесплатно</span></div></div>
@@ -576,7 +576,7 @@ function closeMM(){document.getElementById('mm').classList.remove('open');burger
 function toggleMM(){const mm=document.getElementById('mm');const open=mm.classList.toggle('open');burger.classList.toggle('open',open);}
 document.addEventListener('click',e=>{const mm=document.getElementById('mm');if(mm.classList.contains('open')&&!mm.contains(e.target)&&!burger.contains(e.target))closeMM();});
 const catLabel={bike:"Спорт е-байк",moto:"Е-Мотоцикл",scooter:"Е-Скутер"};
-const words=["секој ден?","во центарот?","на паркинг?","на гориво?"];let wi=0;
+const words=["истата гужва.","истата мака.","истиот стрес."];let wi=0;
 setInterval(()=>{wi=(wi+1)%words.length;const r=document.getElementById('rot');r.style.opacity=0;setTimeout(()=>{r.textContent=words[wi];r.style.opacity=1},220)},2200);
 
 function playVideo(id,el){el.innerHTML=`<iframe width="100%" height="100%" style="position:absolute;inset:0;border:0;border-radius:20px" src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0" title="TAILG Shark" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;el.onclick=null;}
