@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TAILG Македонија — Електрични возила | Официјален дистрибутер</title>
-<meta name="description" content="Официјален и ексклузивен дистрибутер на TAILG во Македонија. Shark, F55, S91 Pro и повеќе. Најдолг дострел, бесплатно пробно возење.">
+<meta name="description" content="Официјален и ексклузивен дистрибутер на TAILG во Македонија. T70, F55, F52, JY32 и повеќе. Бесплатно пробно возење во Скопје.">
 <meta property="og:title" content="TAILG Македонија — Иднината е електрична">
-<meta property="og:image" content="img/shark-main.png">
+<meta property="og:image" content="https://tailg.com/uploadimg/image/20240827/20240827154452_11178.png">
 <link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/shark-main.png">
-<link rel="preload" as="image" href="img/shark-scene.jpg">
+<link rel="preload" as="image" href="https://tailg.com/uploadimg/image/20240827/20240827154452_11178.png">
+<link rel="preload" as="image" href="https://tailg.com/uploadimg/image/20240913/20240913234200_81282.png">
 <style>
 :root{
   --red:#E31937; --red-d:#B3122B; --ink:#0e0e10; --surface:#15151a; --surface-2:#1d1d23;
@@ -55,8 +55,8 @@ header{position:sticky;top:0;z-index:90;background:rgba(14,14,16,.82);backdrop-f
 .mobile-menu{display:none}
 
 /* HERO — dark */
-.hero{position:relative;background:radial-gradient(900px 520px at 80% 8%,rgba(0,0,0,.28),transparent 62%),linear-gradient(135deg,#E31937 0%,#c5152f 38%,#8c0f20 72%,#2a0509 100%);color:#fff;overflow:hidden}
-.hero::after{content:"";position:absolute;inset:0;background:url('img/shark-scene.jpg') center/cover no-repeat;opacity:.12;mix-blend-mode:overlay}
+.hero{position:relative;background:linear-gradient(135deg,#0d0d12 0%,#12121a 50%,#1a1a22 100%);color:#fff;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:none;opacity:0}
 .life-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .life-card{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:16/10;display:block;border:1px solid var(--line)}
 .life-card img{width:100%;height:100%;object-fit:cover;transition:.5s}
@@ -316,7 +316,7 @@ footer{background:#0b0b0d;color:#fff;padding:56px 0 0;border-top:4px solid var(-
   <div class="wrap nav">
     <a href="index.html" class="logo"><img src="img/logo.png" alt="TAILG"><span>МАКЕДОНИЈА</span></a>
     <nav class="nav-links">
-      <a href="#modeli">Модели</a><a href="#shark">Shark</a><a href="#tehnologija">Технологија</a>
+      <a href="#modeli">Модели</a><a href="#t70">T70</a><a href="#tehnologija">Технологија</a>
       <a href="#probno">Пробно возење</a><a href="#kalkulator">Калкулатор</a><a href="#kontakt">Контакт</a>
     </nav>
     <div class="nav-cta">
@@ -326,7 +326,7 @@ footer{background:#0b0b0d;color:#fff;padding:56px 0 0;border-top:4px solid var(-
     <div class="burger" onclick="toggleMM()"><span></span><span></span><span></span></div>
   </div>
   <div class="mobile-menu" id="mm">
-    <a href="#modeli" onclick="closeMM()">Модели</a><a href="#shark" onclick="closeMM()">Shark</a>
+    <a href="#modeli" onclick="closeMM()">Модели</a><a href="#t70" onclick="closeMM()">T70</a>
     <a href="#tehnologija" onclick="closeMM()">Технологија</a><a onclick="closeMM();openTestDrive()" style="cursor:pointer">Пробно возење</a>
     <a href="#kalkulator" onclick="closeMM()">Калкулатор</a><a href="#kontakt" onclick="closeMM()">Контакт</a>
   </div>
@@ -338,17 +338,17 @@ footer{background:#0b0b0d;color:#fff;padding:56px 0 0;border-top:4px solid var(-
     <div class="reveal in">
       <div class="eyebrow">TAILG · ОФИЦИЈАЛЕН ДИСТРИБУТЕР</div>
       <h1>Освој го<br><span class="rotator" id="rot">теренот</span></h1>
-      <p class="lead">TAILG Shark и целата гама електрични возила — сега официјално во Македонија. Најдолг дострел, најниска цена на возење.</p>
+      <p class="lead">TAILG T70 и целата гама електрични возила — сега официјално во Македонија. 2000W мотор, 90 км дострел, најниска цена на возење.</p>
       <div class="hero-cta">
-        <a href="#shark" class="btn btn-light">Запознај го Shark →</a>
-        <a onclick="openTestDrive('shark')" class="btn btn-ghost" style="cursor:pointer">Закажи пробно возење</a>
+        <a href="#t70" class="btn btn-light">Запознај го T70 →</a>
+        <a onclick="openTestDrive('t70')" class="btn btn-ghost" style="cursor:pointer">Закажи пробно возење</a>
       </div>
     </div>
     <div class="hero-media reveal in">
       <div class="glow"></div>
-      <img src="img/shark-main.png" alt="TAILG Shark електричен велосипед" loading="eager" fetchpriority="high">
-      <div class="hero-badge b1"><div class="dot">🏔️</div><div>20×4.0<small>fat-tire теренски</small></div></div>
-      <div class="hero-badge b2"><div class="dot">⚙️</div><div>Shimano<small>7 брзини</small></div></div>
+      <img src="https://tailg.com/uploadimg/image/20240827/20240827154452_11178.png" alt="TAILG T70 електричен мотоцикл" loading="eager" fetchpriority="high">
+      <div class="hero-badge b1"><div class="dot">⚡</div><div>2000W<small>моќен мотор</small></div></div>
+      <div class="hero-badge b2"><div class="dot">🔋</div><div>90 км<small>дострел</small></div></div>
     </div>
   </div>
 </section>
@@ -390,26 +390,25 @@ footer{background:#0b0b0d;color:#fff;padding:56px 0 0;border-top:4px solid var(-
   </div>
 </section>
 
-<!-- SHARK SPOTLIGHT + VIDEO -->
-<section class="sec dark" id="shark">
+<!-- T70 SPOTLIGHT -->
+<section class="sec dark" id="t70">
   <div class="wrap">
     <div class="spotlight reveal">
-      <div class="video-fac" id="sharkVideo" onclick="playVideo('4dhUSS6tPDQ',this)">
-        <img src="img/shark-video.jpg" alt="TAILG Shark видео">
-        <div class="play"><span></span></div>
+      <div class="video-fac" style="cursor:default;pointer-events:none">
+        <img src="https://tailg.com/uploadimg/image/20240913/20240913234200_81282.png" alt="TAILG T70 електричен мотоцикл" style="border-radius:20px;width:100%;height:100%;object-fit:cover">
       </div>
       <div class="txt">
-        <div class="eyebrow">ГЛАВЕН МОДЕЛ · TAILG SHARK</div>
-        <h2>Освојувач на теренот</h2>
-        <p>Sport fat-tire е-байк создаден за град, плажа и планина. Shimano 7-брзински менувач, хидраулични диск сопирачки и 20×4.0 теренски гуми што се справуваат со секоја подлога.</p>
+        <div class="eyebrow">ИСТАКНАТ МОДЕЛ · TAILG T70</div>
+        <h2>2000W сила, 90 км дострел</h2>
+        <p>Е-мотоцикл создаден за градски и меѓуградски патувања. Моќен 2000W мотор, 72V32Ah батерија и 100/80-12 вакуум гуми за удобно и стабилно возење на секоја подлога.</p>
         <div class="specrow">
-          <div><b>750W</b><span>Мотор</span></div>
-          <div><b>45 км/ч</b><span>Брзина</span></div>
-          <div><b>20×4.0</b><span>Fat-tire</span></div>
+          <div><b>2000W</b><span>Мотор</span></div>
+          <div><b>60 км/ч</b><span>Брзина</span></div>
+          <div><b>90 км</b><span>Дострел</span></div>
         </div>
         <div class="fcta">
-          <a href="model.html?id=shark" class="btn btn-red">Целосни спецификации →</a>
-          <a onclick="openTestDrive('shark')" class="btn btn-ghost" style="cursor:pointer">Пробно возење</a>
+          <a href="model.html?id=t70" class="btn btn-red">Целосни спецификации →</a>
+          <a onclick="openTestDrive('t70')" class="btn btn-ghost" style="cursor:pointer">Пробно возење</a>
         </div>
       </div>
     </div>
@@ -426,30 +425,13 @@ footer{background:#0b0b0d;color:#fff;padding:56px 0 0;border-top:4px solid var(-
     </div>
     <div class="tech-grid">
       <div class="tech-card reveal"><div class="ic">🔋</div><h3>Графенска батерија</h3><p>1000+ циклуси на полнење, отпорна на екстремни температури. Полнење за 4–8 часа зависно од моделот.</p></div>
-      <div class="tech-card reveal"><div class="ic">☁️</div><h3>Долг дострел</h3><p>Паметно управување со енергијата — едно полнење, подолг пат. До 161 км кај флагман моделите.</p></div>
-      <div class="tech-card reveal"><div class="ic">⚙️</div><h3>Моќен погон</h3><p>До 5000W моќност и 24° наклон без напор. Силна динамика за град и отворен пат.</p></div>
+      <div class="tech-card reveal"><div class="ic">☁️</div><h3>Долг дострел</h3><p>Паметно управување со енергијата — едно полнење, подолг пат. До 100 км кај флагман моделите.</p></div>
+      <div class="tech-card reveal"><div class="ic">⚙️</div><h3>Моќен погон</h3><p>До 2000W моќност и 15° наклон без напор. Силна динамика за град и отворен пат.</p></div>
     </div>
   </div>
 </section>
 
-<!-- FLAGSHIP S91 -->
-<section class="sec" style="padding-top:0">
-  <div class="wrap">
-    <div class="flag reveal">
-      <div class="txt">
-        <div class="eyebrow">ФЛАГМАН · TAILG S91 PRO</div>
-        <h2>Создаден да доминира</h2>
-        <div class="specrow"><div><b>5000W</b><span>Мотор</span></div><div><b>161 км</b><span>Дострел</span></div><div><b>110 км/ч</b><span>Брзина</span></div></div>
-        <p>Двојни диск ABS сопирачки, камери пред и зад, литиум батерија со брзо полнење за 4–6 часа.</p>
-        <div class="fcta">
-          <a href="model.html?id=s91pro" class="btn btn-red">Целосни спецификации →</a>
-          <a onclick="openTestDrive('s91pro')" class="btn btn-ghost" style="cursor:pointer">Пробно возење</a>
-        </div>
-      </div>
-      <div class="media"><img src="img/s91pro-premium.jpg" alt="TAILG S91 Pro" loading="lazy"></div>
-    </div>
-  </div>
-</section>
+
 
 <!-- CALCULATOR -->
 <section class="sec calc" id="kalkulator">
@@ -487,7 +469,7 @@ footer{background:#0b0b0d;color:#fff;padding:56px 0 0;border-top:4px solid var(-
     <div class="tg">
       <div class="tc reveal"><div class="q">"</div><p>Полнам преку ноќ, возам цела недела. Најдобрата инвестиција за градско возење досега.</p><div class="who"><div class="av">М</div><div><b>Марко Т.</b><span>Скопје · F55</span></div></div></div>
       <div class="tc reveal"><div class="q">"</div><p>Со Shark одам и на планина и во град. Fat-tire гумите се справуваат со сè. Феноменално.</p><div class="who"><div class="av">А</div><div><b>Ана М.</b><span>Скопје · Shark</span></div></div></div>
-      <div class="tc reveal"><div class="q">"</div><p>За достава во центар е идеално. Заштедувам преку 40.000 ден годишно на гориво.</p><div class="who"><div class="av">Б</div><div><b>Бобан К.</b><span>Скопје · GR50</span></div></div></div>
+      <div class="tc reveal"><div class="q">"</div><p>За достава во центар е идеално. Заштедувам преку 40.000 ден годишно на гориво.</p><div class="who"><div class="av">Б</div><div><b>Бобан К.</b><span>Скопје · JY32</span></div></div></div>
     </div>
   </div>
 </section>
@@ -524,7 +506,7 @@ footer{background:#0b0b0d;color:#fff;padding:56px 0 0;border-top:4px solid var(-
 <footer>
   <div class="wrap fgrid">
     <div class="fcol"><img src="img/logo.png" class="flogo" alt="TAILG Македонија"><p>Електрични возила.<br>Официјален и ексклузивен дистрибутер на TAILG во Македонија.</p></div>
-    <div class="fcol"><h4>Модели</h4><a href="model.html?id=shark">Shark</a><a href="model.html?id=f55">F55</a><a href="model.html?id=s91pro">S91 Pro</a><a href="model.html?id=f52">F52</a><a href="model.html?id=gr50">GR50</a><a href="model.html?id=js30">JS30</a></div>
+    <div class="fcol"><h4>Модели</h4><a href="model.html?id=shark">Shark</a><a href="model.html?id=f55">F55</a><a href="model.html?id=f52">F52</a><a href="model.html?id=t70">T70</a><a href="model.html?id=jy32">JY32</a></div>
     <div class="fcol"><h4>Навигација</h4><a href="#tehnologija">Технологија</a><a onclick="openTestDrive()" style="cursor:pointer">Пробно возење</a><a href="#kalkulator">Калкулатор</a><a href="#faq">ЧПП</a></div>
     <div class="fcol"><h4>Контакт</h4><p>📍 Скопје, Македонија</p><p>📞 +389 XX XXX XXX</p><a href="https://wa.me/389XXXXXXXX">💬 WhatsApp</a><a href="mailto:info@tailg.mk">📧 info@tailg.mk</a></div>
   </div>
@@ -534,7 +516,7 @@ footer{background:#0b0b0d;color:#fff;padding:56px 0 0;border-top:4px solid var(-
 <!-- TEST DRIVE MODAL -->
 <div class="modal" id="tdModal" onclick="if(event.target===this)closeTestDrive()">
   <div class="modal-card">
-    <div class="modal-media"><div class="tag">ПРОБНО ВОЗЕЊЕ</div><img id="tdImg" src="img/shark-main.png" alt=""><div class="mname" id="tdName">Избери модел</div></div>
+    <div class="modal-media"><div class="tag">ПРОБНО ВОЗЕЊЕ</div><img id="tdImg" src="https://tailg.com/uploadimg/image/20240827/20240827154452_11178.png" alt=""><div class="mname" id="tdName">Избери модел</div></div>
     <div class="modal-form">
       <button class="x" onclick="closeTestDrive()" aria-label="Затвори">×</button>
       <div id="tdBody">
@@ -561,10 +543,10 @@ footer{background:#0b0b0d;color:#fff;padding:56px 0 0;border-top:4px solid var(-
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "TAILG Македонија",
-  "description": "Официјален и ексклузивен дистрибутер на TAILG електрични возила во Македонија. Shark, F55, S91 Pro, F52, GR50, JS30.",
+  "description": "Официјален и ексклузивен дистрибутер на TAILG електрични возила во Македонија. T70, F55, F52, JY32, Shark и повеќе.",
   "url": "https://tailg.mk",
   "logo": "https://tailg.mk/img/logo.png",
-  "image": "https://tailg.mk/img/shark-main.png",
+  "image": "https://tailg.com/uploadimg/image/20240827/20240827154452_11178.png",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Скопје",
