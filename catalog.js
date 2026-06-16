@@ -112,7 +112,7 @@ const TAILG_CATALOG = [
     badge: "НОВО",
     price: 42990,
     image: "img/trotinet-main.jpg",
-    gallery: ["img/trotinet-main.jpg"],
+    gallery: ["img/trotinet-main.jpg","img/trotinet-1.jpg","img/trotinet-2.jpg"],
     specs: {
       "Мотор": "800W", "Макс. брзина": "45 км/ч", "Батерија": "48V 12500mAh литиум",
       "Режими": "Еко / Нормал / Спорт / Пешачки", "Темпомат": "Да",
