@@ -6,7 +6,7 @@
 const TAILG_CATALOG = [
   {
     id: "t70", name: "T70", category: "moto",
-    tagline: "2000W сила, 90 км дострел",
+    tagline: "Господар на секој пат",
     badge: "НОВО",
     price: 93900,
     image: "img/t70-main.png",
