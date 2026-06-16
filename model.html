@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TAILG Македонија · Модел</title>
-<meta name="description" content="Детали и спецификации за TAILG електрично возило. Официјален дистрибутер во Македонија. Закажи бесплатно пробно возење.">
+<meta name="description" content="Детали и спецификации за TAILG електрично возило. Официјален дистрибутер во Македонија. Побарај понуда без обврска.">
 <meta property="og:type" content="product">
 <meta property="og:site_name" content="TAILG Македонија">
 <meta property="og:title" content="TAILG Македонија · Модел">
@@ -150,7 +150,7 @@ footer p{color:#7a7a7f;font-size:13px}
     <a href="index.html" class="logo"><img src="img/logo.png" alt="TAILG"><span>МАКЕДОНИЈА</span></a>
     <div class="right">
       <a href="index.html#modeli" class="back">← Сите модели</a>
-      <a onclick="openTestDrive()" class="btn btn-red" style="cursor:pointer">Пробно возење</a>
+      <a href="https://wa.me/38977583248" class="btn btn-red" target="_blank">Побарај понуда</a>
     </div>
   </div>
 </header>
@@ -189,18 +189,18 @@ footer p{color:#7a7a7f;font-size:13px}
   </div>
 </div>
 
-<a href="https://wa.me/389XXXXXXXX" class="wa-float" aria-label="WhatsApp">
+<a href="https://wa.me/38977583248" class="wa-float" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.911zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
 </a>
 
 <script src="catalog.js"></script>
 <script>
-const catLabel={bike:"Спортски е-велосипед",moto:"Е-Мотоцикл",scooter:"Е-Скутер"};
-const COLORS={bike:["#1c1c1c","#E31937","#f5f5f5"],moto:["#1c1c1c","#E31937","#f5f5f5","#2E5090"],scooter:["#f5f5f5","#1c1c1c","#E31937"]};
+const catLabel={bike:"Спортски е-велосипед",moto:"Е-Мотоцикл",scooter:"Е-Скутер",kick:"Електичен тротинет"};
+const COLORS={bike:["#1c1c1c","#E31937","#f5f5f5"],moto:["#1c1c1c","#E31937","#f5f5f5","#2E5090"],scooter:["#f5f5f5","#1c1c1c","#E31937"],kick:["#1c1c1c","#f5f5f5","#E31937"]};
 const params=new URLSearchParams(location.search);
 const id=params.get('id')||TAILG_CATALOG[0].id;
 const m=TAILG_CATALOG.find(x=>x.id===id)||TAILG_CATALOG[0];
-const catLabelMeta={bike:"Спортски е-велосипед",moto:"Е-Мотоцикл",scooter:"Е-Скутер"};
+const catLabelMeta={bike:"Спортски е-велосипед",moto:"Е-Мотоцикл",scooter:"Е-Скутер",kick:"Електичен тротинет"};
 const metaDesc=`TAILG ${m.name} · ${m.tagline}. ${m.specs["Мотор"]?m.specs["Мотор"]+", ":""}${m.specs["Дострел"]||""}${m.specs["Дострел"]?" дострел. ":""}Официјален дистрибутер во Македонија. Бесплатно пробно возење.`;
 document.title=`TAILG ${m.name} · ${m.tagline} | TAILG Македонија`;
 document.querySelector('meta[name="description"]').content=metaDesc;
@@ -210,7 +210,7 @@ document.querySelector('meta[property="og:image"]').content=m.image;
 document.querySelector('link[rel="canonical"]').href=`model.html?id=${m.id}`;
 document.getElementById('crumbName').textContent=m.name;
 const imgs=(m.gallery&&m.gallery.length)?m.gallery:[m.image];
-const waMsg=`https://wa.me/389XXXXXXXX?text=${encodeURIComponent("Здраво! Ме интересира TAILG "+m.name+". Може ли понуда?")}`;
+const waMsg=`https://wa.me/38977583248?text=${encodeURIComponent("Здраво! Ме интересира TAILG "+m.name+". Може ли понуда?")}`;
 
 const ks=[];
 if(m.specs["Мотор"])ks.push(["Мотор",m.specs["Мотор"]]);
@@ -242,9 +242,8 @@ document.getElementById('app').innerHTML=`
     <div class="swatches"><span>Боја:</span>${(COLORS[m.category]||["#1c1c1c"]).map((c,i)=>`<div class="dot ${i===0?'active':''}" style="background:${c}" onclick="this.parentNode.querySelectorAll('.dot').forEach(d=>d.classList.remove('active'));this.classList.add('active')"></div>`).join("")}<small style="color:var(--mid);font-size:11px">(достапност по барање)</small></div>
     <div class="price-row"><div class="p">${tailgPrice(m.price)}</div><div class="note">* ориентациона цена, подлежи на промена</div></div>
     <div class="ctas">
-      <a onclick="openTestDrive('${m.id}')" class="btn btn-red" style="cursor:pointer">📅 Закажи пробно возење</a>
-      <a href="${waMsg}" class="btn btn-wa">💬 WhatsApp</a>
-      <a href="index.html#kontakt" class="btn btn-ghost">Понуда</a>
+      <a href="${waMsg}" class="btn btn-red">💬 Побарај понуда</a>
+      <a href="index.html#kontakt" class="btn btn-ghost">Контакт</a>
     </div>
   </div>
 </section>
@@ -263,7 +262,7 @@ document.getElementById('app').innerHTML=`
 
 <section class="sec gray">
   <h2>Зошто ${m.name}</h2><div class="sub">Клучни предности</div>
-  <div class="features wrap" style="padding:0">${feats.map(([ic,h,p])=>`<div class="fcard"><div class="ic">${ic}</div><h3>${h}</h3><p>${p}</p></div>`).join("")}</div>
+  <div class="features wrap" style="padding:0">${(m.features&&m.features.length?m.features.map(f=>`<div class="fcard"><div class="ic">${f.icon}</div><h3>${f.title}</h3><p>${f.body}</p></div>`):feats.map(([ic,h,p])=>`<div class="fcard"><div class="ic">${ic}</div><h3>${h}</h3><p>${p}</p></div>`)).join("")}</div>
 </section>
 
 ${m.video?`<section class="sec" style="background:#0e0e10;color:#fff">
@@ -287,10 +286,9 @@ ${m.video?`<section class="sec" style="background:#0e0e10;color:#fff">
 <section class="sec">
   <div class="cta-band">
     <h2>Подготвен за ${m.name}?</h2>
-    <p>Закажи бесплатно пробно возење или побарај понуда. Без обврска.</p>
+    <p>Побарај понуда или пишете ни на WhatsApp. Без обврска, одговараме брзо.</p>
     <div class="ctas">
-      <a onclick="openTestDrive('${m.id}')" class="btn btn-red" style="cursor:pointer">📅 Пробно возење</a>
-      <a href="${waMsg}" class="btn btn-wa">💬 WhatsApp</a>
+      <a href="${waMsg}" class="btn btn-red">💬 Побарај понуда</a>
     </div>
   </div>
 </section>
@@ -338,7 +336,7 @@ const TIMES=["10:00","11:30","13:00","15:00","16:30","18:00"];let tdTime=TIMES[0
 const sw=document.getElementById('tdSlots');
 TIMES.forEach((t,i)=>{const s=document.createElement('div');s.className="slot"+(i===0?" active":"");s.textContent=t;s.onclick=()=>{document.querySelectorAll('.slot').forEach(x=>x.classList.remove('active'));s.classList.add('active');tdTime=t;};sw.appendChild(s);});
 document.getElementById('tdDate').min=new Date().toISOString().split('T')[0];
-function syncTDImg(){const mm=TAILG_CATALOG.find(x=>x.id===tdSel.value);if(mm){document.getElementById('tdImg').src=mm.image;document.getElementById('tdName').textContent="TAILG "+mm.name;document.getElementById('tdWa').href="https://wa.me/389XXXXXXXX?text="+encodeURIComponent("Здраво! Сакам пробно возење за TAILG "+mm.name+".");}}
+function syncTDImg(){const mm=TAILG_CATALOG.find(x=>x.id===tdSel.value);if(mm){document.getElementById('tdImg').src=mm.image;document.getElementById('tdName').textContent="TAILG "+mm.name;document.getElementById('tdWa').href="https://wa.me/38977583248?text="+encodeURIComponent("Здраво! Сакам пробно возење за TAILG "+mm.name+".");}}
 function openTestDrive(mid){document.querySelector('#tdBody form')?.reset?.();tdSel.value=mid||m.id;syncTDImg();document.getElementById('tdModal').classList.add('open');document.body.style.overflow="hidden";}
 function closeTestDrive(){document.getElementById('tdModal').classList.remove('open');document.body.style.overflow="";}
 function submitTD(e){e.preventDefault();const mm=TAILG_CATALOG.find(x=>x.id===tdSel.value);const dt=document.getElementById('tdDate').value;
